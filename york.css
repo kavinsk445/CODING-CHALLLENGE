@@ -1,0 +1,62 @@
+
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2012/12/14/04/13/dartmouth-college-69897_640.jpg");
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
+
+h3 {
+    color: #FFFFFF;
+    background-color: #00CCFF;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+    font-family: Verdana;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+table, tr, td {
+    width: 50%;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 1px;
+    border-radius: 6px;
+    color: #009900;
+    background-color: #F2F2F2;
+    padding: 1px;
+}
+
+.div {
+    font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit {
+    color: #FFFFFF;
+    background-color: #00CCFF;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+    width: 100%;
+    font-family: Verdana;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#result {
+    color: #00CC66;
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width: 50%;
+    font-size: 20px;
+}
