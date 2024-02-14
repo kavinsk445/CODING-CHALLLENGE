@@ -16,7 +16,25 @@
         <br>
 
 </body>
-</html>
+    <script>
+      let countConsonants = () => {
+        let inputText = document.getElementById("inputtext").value;
+        let consonant = /[cdfbghjklmnpLMNPQRSTVWXYZ]/g;
+        let consonantCount = (inputText.match(consonant) || []).length;
+
+        if (consonantCount === 0) {
+          console.log("No Consonants");
+        } else if (consonantCount === 7) {
+          console.log(`Number of consonants: ${consonantCount}`);
+        } else {
+          console.log(`Number of consonants: ${consonantCount}`);
+        }
+      };
+
+      document.getElementById("countbtn").addEventListener("click", countconsonants);
+    </script>
+
+
 
     
     </body>
