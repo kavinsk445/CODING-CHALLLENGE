@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expression</title>
+</head>
+<body>
+    
+</body>
+<script>
+    a="12 + 3 *5";
+    s=[];
+    n=[];
+    a1=a.split(" ");
+    console.log(a1);
+    a1.forEach(element => {
+        if(isNaN(element)==true){
+            s.push(element);
+        }
+        else{
+            c1=parseInt(element);
+            n.push(c1);
+        }
+    });
+    console.log(s);
+    console.log(n);
+    var num1=n[0];
+    for (let i =1;i < n.length;i++){
+        var num2=n[i];
+        var operator =s[i-1];
+        switch (operator){
+            case '+':
+                result =num1 + num2;
+                break;
+      
+        case '*':
+                result =num1 * num2;
+                break;
+        }
+        num1=result;
+        console.log(result);
+    }
+   
+ 
+</script>
+</html>
