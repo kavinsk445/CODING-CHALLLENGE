@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>York Admission</title>
-        <link rel="stylesheet" href="york.css">
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2012/12/14/04/13/dartmouth-college-69897_640.jpg');
+            background-size: 70%;
+            font-weight: bold;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h3 {
+            color: #FFFFFF;
+            background-color: #00CCFF;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 50%;
+            font-family: Verdana;
+            padding: 5px;
+            border-radius: 6px;
+        }
+        table, tr, td {
+            width: 50%;
+            border-style: solid 1px black
+            ;
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 1px;
+            border-radius: 6px;
+            color: #009900;
+            background-color: #F2F2F2;
+            padding: 1px;
+        }
+        #submit {
+            color: #FFFFFF;
+            background-color: #00CCFF;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            width: 50%;
+            font-family: Verdana;
+            font-weight: bold;
+            border-radius: 6px;
+            
+        }
+        #result {
+            color: #00CC66;
+            background-color: #FFFFFF;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            width: 50%;
+            font-size: 20px;
+        }
+    </style>
 </head>
-    <body>
+<body>
     <h3>York Admission</h3>
     <form onsubmit="return display()">
         <table>
@@ -51,10 +100,61 @@
                 <td>First Graduate:</td>
                 <td><input type="checkbox" id="firstGraduate" name="firstGraduate"> Click if you are First Graduate</td>
             </tr>
-            <tr>
-                <td colspan="2"><input type="submit" id="submit" value="CONFIRM ADMISSION"></td>
-            </tr>
+           
         </table>
-    </form>
-    </body>
+        <center>
+        <input type="submit" id="submit" value="CONFIRM ADMISSION">
+        </center>
+            
+        <div id="result"></div>
+    </form>
+ 
+    <script>
+        function display() {
+            var sname = document.getElementById("sname").value;
+            var deptname = document.getElementById("deptname").value;
+            var preferHostel = document.getElementsByName("preferHostel");
+            var firstGraduate = document.getElementById("firstGraduate").checked;
+            var admissionFee = 30000;
+            var tuitionFee;
+            var hostelFee = 0;
+            var totalCollegeFee;
+
+            switch (deptname) {
+                case "EEE":
+                    tuitionFee = 45000;
+                    break;
+                case "ECE":
+                    tuitionFee = 50000;
+                    break;
+                case "CSE":
+                    tuitionFee = 45000;
+                    break;
+                case "MECH":
+                    tuitionFee = 55000;
+                    break;
+                case "CIVIL":
+                    tuitionFee = 50000;
+                    break;
+                case "IT":
+                    tuitionFee = 45000;
+                    break;
+            }
+
+            if (preferHostel[0].checked) {
+                hostelFee = 75000;
+            }
+
+            totalCollegeFee = admissionFee + tuitionFee + hostelFee;
+
+            if (firstGraduate) {
+                totalCollegeFee -= 20000;
+            }
+
+            document.getElementById("result").innerHTML = "Hi " + sname + ",<br>Your Admission Fee is Rs. " + admissionFee + "<br>Tuition Fee is Rs. " + tuitionFee + "<br>Hostel Fee is Rs. " + hostelFee + "<br>Total College Fee is Rs. " + totalCollegeFee;
+
+            return false;
+        }
+    </script>
+</body>
 </html>
