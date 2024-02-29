@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XYZ Incident form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 id="heading1">Customer Incident Form</h1>
+    <p id="para1">We appreciate your business and want to hear about your experience during your visit.</p>
+    <form id="customerApplication" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td><label for="userName">Name:</label></td>
+                <td><input type="text" id="userName" name="userName" required minlength="2" maxlength="20"></td>
+            </tr>
+            <tr>
+                <td><label for="userAddr">Address:</label></td>
+                <td><textarea id="userAddr" name="userAddr" rows="5" cols="50" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="userState">State:</label></td>
+                <td>
+                    <select id="userState" name="userState" required>
+                        <option value="KA">Karnataka</option>
+                        <option value="MAS">Tamilnadu</option>
+                        <option value="KL">Kerala</option>
+                        <option value="AP">Andhrapradesh</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="userPhone">Phone:</label></td>
+                <td><input type="tel" id="userPhone" name="userPhone" pattern="[789][0-9]{9}" required></td>
+            </tr>
+            <tr>
+                <td><label for="userEmail">Email:</label></td>
+                <td><input type="email" id="userEmail" name="userEmail" required></td>
+            </tr>
+            <tr>
+                <td><label for="userContacts">Preferred way to contact you?</label></td>
+                <td>
+                    <input type="radio" id="contactEmail" name="userContacts" value="Email">
+                    <label for="contactEmail">Email</label><br>
+                    <input type="radio" id="contactPhone" name="userContacts" value="Phone">
+                    <label for="contactPhone">Phone</label><br>
+                    <input type="radio" id="contactPostal" name="userContacts" value="Postal">
+                    <label for="contactPostal">Postal</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="visitDate">Date of Visit:</label></td>
+                <td><input type="date" id="visitDate" name="visitDate" required></td>
+            </tr>
+            <tr>
+                <td><label for="userIncident">Please Describe The Incident:</label></td>
+                <td><textarea id="userIncident" name="userIncident" rows="5" cols="30" required></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" id="submitBtn" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <label>View your FeedBack Status:</label>
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>

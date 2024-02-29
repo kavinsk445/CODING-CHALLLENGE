@@ -1,0 +1,28 @@
+h1 {
+    color: white;
+    font-family: Arial;
+    font-style: normal;
+    background-color: #0000FF;
+}
+
+body {
+    
+    background-color: #ff6347;
+}
+
+#submitBtn {
+    color: white;
+    font-family: Arial;
+    font-style: normal;
+    background-color: blue;
+    margin: 6px;
+    padding: 6px;
+}
+
+#result {
+    border: solid red;
+    margin-left: 500px;
+    margin-right: 500px;
+    text-align: left;
+    padding: 6px 6px 6px 6px;
+}
